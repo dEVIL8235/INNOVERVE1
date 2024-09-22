@@ -1,0 +1,9 @@
+#step-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#complete-step {
+    padding: 10px 20px;
+    font-size: 16px;
+}

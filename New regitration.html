@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships and Grants Bureau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form method="post" action="https://script.google.com/macros/s/AKfycbxqrTZmWohPx_niwq39pP8yHuV9jmHa3TR4IrfdJib0-rMf5E9vOrfpZkcw30My3ozlAw/exec" id="container" class="container">
+        <h3>New Registration</h3>
+        Name : <input type="text" name="Name" placeholder="--Enter Your Name--"><br>
+        course : <select name="course" id="course">
+            <option value="">Select-- course</option>
+            <option value="1">Diploma/Polytechnic</option>
+            <option value="2">Engineering</option>
+        </select>
+        Branch :
+        <select name="branch" id="branch">
+            <option value="">Select--Branch</option>
+            <option value="1">CSE</option>
+            <option value="2">Mechanical</option>
+            <option value="3">AUTO</option>
+            <option value="4">ECE</option>
+            <option value="5">EE</option>
+            <option value="6">Civil</option>
+        </select><br>
+        Email : <input type="email" name="Email" placeholder="--Enter Email--"><br>
+        Phone No : <input type="number" name="Phone Number" placeholder="--Enter Mob No--"><br>
+        Aadhar No : <input type="number" name="aadhar" id="aadhar" placeholder="--Enter Aadhar--">
+        Address : <textarea name="Address" placeholder="address" id="address"></textarea><br>
+        Photo : <input type="file" name="Photo" id="Photo"><br>
+        Caste Certificate : <input type="file" name="caste certificate" id="Caste"><br>
+        Income Certificate: <input type="file" name="Income" id="Income"><br>
+        Resident Certificate : <input type="file" name="Resident" id="Resident"><br>
+        Bonafide Certificate : <input type="file" name="bonafide" id="bonafide"><br>
+        Bank passbook : <input type="file" name="Passbook" id="passbook"><br>
+        <input type="submit">
+
+
+    </form>
+    <script src="Google1 sheet.js"> </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyJhu9mf8ACYw4V-rr_eyLLljoMC62fNvkkEZ744wc02-MIO9H4xJ0bli4UOlTRM5BGcg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!registration successful! your id is Student123 and pass is 12345 ', response))
+            .catch(error => console.error('Error!', error.message))
+        alert("Login successful! your id is Student123 and pass is 12345 Redirecting...");
+        
+        }
+      )
+      
+      </script>
+</body>
+
+</html>

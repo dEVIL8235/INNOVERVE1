@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoVerve Logo</title>
+    <link rel="stylesheet" href="logo.css">
+</head>
+<body>
+    <div class="logo-container">
+        <svg class="background-shapes" width="200" height="200">
+            <circle cx="100" cy="100" r="80" fill="none" stroke-width="10" stroke="url(#gradient)" />
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff4081;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#40c4ff;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <h1 class="logo-text">
+            <span class="logo-part1">Inno</span><span class="logo-part2">Verve</span>
+        </h1>
+    </div>
+
+    <canvas id="waveCanvas"></canvas>
+
+    <script src="logo.js"></script>
+</body>
+</html>

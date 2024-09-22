@@ -1,0 +1,81 @@
+/* style.css */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-container {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-text {
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff4081, #40c4ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 3s ease infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.logo-part1, .logo-part2 {
+    position: relative;
+}
+
+.logo-part1:hover {
+    text-shadow: 0 0 20px rgba(255, 64, 129, 1);
+}
+
+.logo-part2:hover {
+    text-shadow: 0 0 20px rgba(64, 196, 255, 1);
+}
+
+/* Gradient animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* SVG animation for rotating circle */
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+/* Wave Canvas Styling */
+#waveCanvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
